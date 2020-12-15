@@ -6,7 +6,7 @@ pipeline {
         echo '..... Build Phase Started :: Compiling Source Code :: ......'
         sh 'cd java_web_code'
         sh 'pwd'
-        sh 'sudo mvn install'
+        #sh 'sudo mvn install'
         echo 'Maven build complete'
       }
     }
