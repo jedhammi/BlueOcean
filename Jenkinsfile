@@ -4,9 +4,9 @@ pipeline {
     stage('BUILD') {
       steps {
         echo '..... Build Phase Started :: Compiling Source Code :: ......'
-        sh 'cd java_web_code'
-        sh 'pwd'
-        sh 'sudo mvn install'
+        dir("/var/lib/jenkins/workspace/BlueOcean_master/java_web_code") { 
+           sh 'sudo mvn install'
+        }      
         echo 'Maven build complete'
       }
     }
